@@ -2,7 +2,10 @@ import React from "react";
 import "../pages/StartPage.css";
 import "./SignupBox.css";
 
-function SignupBox() {
+function SignupBox({ onPage }) {
+  const finishClick = () => {
+    onPage("custom");
+  }
   return (
     <div>
         <div className="TitleDiv">
@@ -26,10 +29,10 @@ function SignupBox() {
               <div className="labelDiv">이름</div>
               <input className="inputBox" type="password"></input>
             </div>
-            <div className="inputDiv">
+            {/* <div className="inputDiv">
               <div className="labelDiv">생년월일</div>
               <input className="inputBox" type="password"></input>
-            </div>
+            </div> */}
             <div className="inputDiv">
               <div className="labelDiv">닉네임</div>
               <input className="inputBox" type="password"></input>
@@ -43,7 +46,7 @@ function SignupBox() {
               <input className="inputBox" type="password"></input>
             </div>
         </div>
-        <button className="lastBtn">완료</button>
+        <button className="finishBtn" onClick={finishClick}>완료</button>
     </div>
   );
 }

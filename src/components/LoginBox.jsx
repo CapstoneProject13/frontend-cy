@@ -2,7 +2,10 @@ import React from "react";
 import "../pages/StartPage.css";
 import "./LoginBox.css";
 
-function LoginBox() {
+function LoginBox({ onPage }) {
+  const signupClick = () => {
+    onPage("signup")
+  }
   return (
     <div>
         <div className="TitleDiv">
@@ -26,7 +29,7 @@ function LoginBox() {
         </div>
         
         <button className="lastBtn">로그인</button>
-        <button className="lastBtn signupBtn">회원가입</button>
+        <button className="lastBtn signupBtn" onClick={signupClick}>회원가입</button>
         
         <div className="hrLine">or</div>
         <button className="googleBtn">
