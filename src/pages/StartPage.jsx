@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./StartPage.css";
+import GDevelopTest from '../components/GDevelopTest';
 import LoginBox from "../components/LoginBox";
 import SignupBox from "../components/SignupBox";
 import CustomizingBox from "../components/CustomizingBox";
@@ -20,14 +21,33 @@ function StartPage() {
       setPage("custom");
     }
   }
+  // const testClick = () => {
+  //   content = <iframe
+  //       title="GDevelop Game"
+  //       src="./game/index.html"
+  //       width="100%"
+  //       height="800px"
+  //       frameborder="0"
+  //     />
+  // }
   if (page_state === "login"){
     content = <LoginBox onPage={handlePage} />
   }
   else if (page_state === "signup"){
     content = <SignupBox onPage={handlePage} />
   }
-  else{
+  else if(page_state === "custom"){
     content = <CustomizingBox onPage={handlePage} />
+  }
+  else if(page_state === "test"){
+    content=<GDevelopTest></GDevelopTest>
+    // content = <iframe
+    //     title="GDevelop Game"
+    //     src="./gdeveloptest/index.html"
+    //     width="100%"
+    //     height="800px"
+    //     frameborder="0"
+    //   />
   }
   
   const boxSlide ={

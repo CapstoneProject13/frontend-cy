@@ -1,6 +1,7 @@
 import React from "react";
 import "../pages/StartPage.css";
 import "./CustomizingBox.css";
+import GDevelopTest from './GDevelopTest';
 
 function CustomizingBox() {
   return (
@@ -13,7 +14,7 @@ function CustomizingBox() {
             캐릭터박스
         </div>
         <div className="customBox">
-            헤어, 옷 박스
+            <GDevelopTest/>
         </div>
         
         <button className="customBtn">완료</button>
